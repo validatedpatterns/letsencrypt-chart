@@ -4,6 +4,14 @@
 
 A Helm chart to add letsencrypt support to Validated Patterns.
 
+**Homepage:** <https://github.com/validatedpatterns/letsencrypt-chart>
+
+## Maintainers
+
+| Name | Email | Url |
+| ---- | ------ | --- |
+| Validated Patterns Team | <validatedpatterns@googlegroups.com> |  |
+
 ## Usage
 
 In order to enable this chart in your patterns, please add and edit the
