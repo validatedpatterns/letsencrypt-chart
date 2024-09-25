@@ -1,0 +1,17 @@
+suite: Test api-cert with default values
+templates:
+  - templates/api-cert.yaml
+release:
+  name: release-test
+tests:
+  - it: Should output default values
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: Certificate
+      - containsDocument:
+          kind: Certificate
+          apiVersion: cert-manager.io/v1
+          name: api-validated-patterns-cert
+          namespace: openshift-config
