@@ -1,0 +1,4 @@
+rules:
+  secrets-inherit:
+    ignore:
+      - update-helm-repo.yml
