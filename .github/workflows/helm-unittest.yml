@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v5
+        with:
+          persist-credentials: false
 
       - name: Run make helmlint
         run: |
