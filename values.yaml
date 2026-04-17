@@ -51,3 +51,8 @@ letsencrypt:
 
   # -- String the channel to install cert-manager from (Defaults to "stable-v1")
   certmanagerChannel: "stable-v1"
+
+  # -- Which cluster Argo CD instance to patch for the server route TLS settings (`name` and `namespace` on the ArgoCD CR).
+  # Use `vp-gitops` when Argo CD runs in the Validated Patterns `vp-gitops` namespace (default).
+  # Use `openshift-gitops` for the default OpenShift GitOps operator instance.
+  gitopsInstance: vp-gitops

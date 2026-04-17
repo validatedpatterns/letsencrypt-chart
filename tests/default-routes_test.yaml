@@ -1,0 +1,29 @@
+suite: Test default-routes Argo CD target
+templates:
+  - templates/default-routes.yaml
+release:
+  name: release-test
+tests:
+  - it: patches vp-gitops Argo CD by default
+    asserts:
+      - hasDocuments:
+          count: 3
+      - containsDocument:
+          any: true
+          kind: ArgoCD
+          apiVersion: argoproj.io/v1alpha1
+          name: vp-gitops
+          namespace: vp-gitops
+  - it: patches openshift-gitops when gitopsInstance is set
+    set:
+      letsencrypt:
+        gitopsInstance: openshift-gitops
+    asserts:
+      - hasDocuments:
+          count: 3
+      - containsDocument:
+          any: true
+          kind: ArgoCD
+          apiVersion: argoproj.io/v1alpha1
+          name: openshift-gitops
+          namespace: openshift-gitops
