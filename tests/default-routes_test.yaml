@@ -9,6 +9,7 @@ tests:
       - hasDocuments:
           count: 3
       - containsDocument:
+          any: true
           kind: ArgoCD
           apiVersion: argoproj.io/v1alpha1
           name: vp-gitops
@@ -21,6 +22,7 @@ tests:
       - hasDocuments:
           count: 3
       - containsDocument:
+          any: true
           kind: ArgoCD
           apiVersion: argoproj.io/v1alpha1
           name: openshift-gitops
